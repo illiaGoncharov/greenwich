@@ -108,12 +108,13 @@ p, h1, h2, h3, h4, h5 {
 
 @media screen and (max-width: 768px) {
     .hero {
-        min-height: 800px;
+        min-height: 600px;
+        height: 80vh;
     }
 
     .hero__h2 {
         font-size: var(--heading);
-        top: 80vh;
+        top: 65vh;
         width: 90vw;
     }
 }
