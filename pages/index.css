@@ -3,21 +3,22 @@
   src: url('../vendor/ABCCulturalService-Bold.woff') format('woff');
 }
 @font-face {
-  font-family: 'CS-BoldMix';
-  src: url('../vendor/ABCCulturalService-BoldMix.woff') format('woff');
-}
-@font-face {
     font-family: 'CS-Medium';
     src: url('../vendor/ABCCulturalService-Medium.woff') format('woff');
 }
-@font-face {
+/* @font-face {
     font-family: 'CS-MixEx';
     src: url('../vendor/ABCCulturalService-MixExtended.woff') format('woff');
+} */
+@font-face {
+    font-family: 'CS-BoldMix';
+    src: url('../vendor/ABCCulturalService-BoldMix.woff') format('woff');
 }
 
 
 body {
     font-family: 'CS-Medium';
+    font-feature-settings: "c2sc", "smcp";
     color: #000000;
 
     text-rendering: optimizeLegibility;
@@ -89,12 +90,12 @@ p, h1, h2, h3, h4, h5 {
 }
 .hero__h1 {
     font-family: 'CS-BoldMix';
-    font-size: 48px;
+    font-size: 120px;
     color: var(--black);
     text-align: center;
     font-weight: 400;
     line-height: 30px;
-    padding-top: 255px;
+    padding-top: 305px;
     text-transform: uppercase;   
 }
 .hero__h1 span {
@@ -103,12 +104,12 @@ p, h1, h2, h3, h4, h5 {
 .hero__h2 {
     color: var(--black);
     font-family: 'CS-Bold';
-    font-size: 64px;
+    font-size: 34px;
     font-weight: 700;
-    line-height: 57px;
+    line-height: 52px;
     text-align: center;
     max-width: 900px;
-    margin: 45px auto;
+    margin: 25px auto;
 }
 .hero__image {
     position: absolute;
@@ -116,14 +117,17 @@ p, h1, h2, h3, h4, h5 {
 #hero__logo {
     top: 20px;
     left: 24px;
+    
 }
 #hero__about {
     top: 29px;
     right: 24px;
+    height: 42px;
 }
 #hero__contact {
     bottom: 29px;
     right: 24px;
+    height: 42px;
 }
 .hero__red-container {
     -webkit-animation: rotationRed 20s linear infinite;
@@ -207,7 +211,8 @@ p, h1, h2, h3, h4, h5 {
 
 @media screen and (max-width: 768px) {
     .hero__h1 {
-        padding-top: 300px;
+        padding-top: 350px;
+        font-size: 50px;
     }
     .hero__h1 span {
         font-size: 22px;
@@ -215,10 +220,12 @@ p, h1, h2, h3, h4, h5 {
     .hero__h2 {
         font-size: 40px;
         line-height: 100%;
+        width: 60%;
+        font-size: 25px;
     }
 
     #hero__logo {
-        width: 135px;
+        height: 22px;
         top: 12px;
         left: 15px;
         z-index: 1;
@@ -227,10 +234,12 @@ p, h1, h2, h3, h4, h5 {
         top: 13px;
         right: 15px;
         z-index: 1;
+        height: 22px;
     }
     #hero__contact {
         bottom: 13px;
         right: 15px;
+        height: 22px;
     }
     #hero__red {
         bottom: 29px;
@@ -267,7 +276,15 @@ p, h1, h2, h3, h4, h5 {
     text-align: left;
     line-height: 24px;
     text-transform: uppercase;
-    font-family: 'CS-MixEx';
+    font-family: 'CS-BoldMix';
+}
+.article__h3-image {
+    height: 40px;
+    width: auto;
+    align-self: flex-start;
+}
+.article__h3-image_mobile {
+    height: 20px;
 }
 .article__column {
     max-width: 815px;
@@ -307,13 +324,12 @@ p, h1, h2, h3, h4, h5 {
         box-sizing: border-box;
     }
 
-    .article__h3 {
-    }
-
     .article__h3 br {
         display: none;
     }
-
+    .article__h3-image {
+        display: none;
+    }
     .article__column-container {
         gap: 8px;
         flex-direction: column;
@@ -349,6 +365,11 @@ p, h1, h2, h3, h4, h5 {
     position: relative;
     padding-bottom: 40px;
     padding-top: 40px;
+}
+.contact__article img {
+    height: 32px;
+    width: 32px;
+    padding-top: 10px;
 }
 .contact__article:nth-child(2) {
     width: 400px;
