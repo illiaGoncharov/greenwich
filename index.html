@@ -1,4 +1,3 @@
-<!-- tilda alert -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +9,10 @@
     <meta name="description" content="Greenwich Cultural Services - Brand activation through art">
     <meta name="author" content="Ilia Goncharov">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest"> -->
 
 </head>
 <body>
@@ -306,7 +305,8 @@
             e.preventDefault();
 
             // Получаем элемент, к которому нужно прокрутить страницу
-            const targetElement = document.querySelector(e.target.getAttribute('href'));
+            const targetElement = document.querySelector(e.target.parentNode.getAttribute('href'));
+            // console.log(targetElement)
 
             // Прокручиваем страницу к целевому элементу с плавным эффектом
             if (targetElement) {
@@ -327,6 +327,25 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', handleAnchorClick);
         });
+
+        // // Проверка наличия элемента перед его использованием
+        // const articleEl = document.querySelector(".aim");
+        // const contactEl = document.querySelector(".contact");
+
+        // const articleElStyles = window.getComputedStyle(articleEl.querySelector('.article__column-container'));
+        // contactEl.querySelector('.article__column-container').style.paddingLeft = articleElStyles.marginLeft;
+
+        // // Обработка ошибок при навигации по якорным ссылкам
+        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        //     anchor.addEventListener('click', function (e) {
+        //         e.preventDefault();
+
+        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+        //             behavior: 'smooth',
+        //             block: 'nearest'
+        //         });
+        //     });
+        // });
     </script>
 </body>
 </html>
