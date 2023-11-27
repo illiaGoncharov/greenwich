@@ -6,10 +6,14 @@
     <link rel="stylesheet" href="./pages/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Greenwich Cultural Services - Brand activation through art">
+    <meta name="author" content="Ilia Goncharov">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest"> -->
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
 </head>
 <body>
@@ -17,9 +21,10 @@
     </header>
 
     <main class="main">
-        <img class="body__star" src="./assets/images/body__star.svg" alt="">
+        <!-- Звезда на заднем фоне -->
+        <img class="body__star" src="./assets/images/body__star.svg"alt="Background Star Image">
 
-        <article class="hero">
+        <article class="hero" role="banner" aria-labelledby="hero__heading">
             <div>
                 <h1 class="hero__h1">
                     Greenwich <br> <span>Cultural Services</span> 
@@ -28,22 +33,22 @@
                     Brand activation through art
                 </h2>
             </div>
-            <img id="hero__logo" class="hero__image" src="./assets/images/hero__logo.svg" alt="">
+            <img id="hero__logo" class="hero__image" src="./assets/images/hero__logo.svg" alt="Greenwich Cultural Services Logo">
             <a href="#about">
-                <img id="hero__about" class="hero__image" src="./assets/images/hero__about.svg" alt="">
+                <img id="hero__about" class="hero__image" src="./assets/images/hero__about.svg" alt="Learn More About Us">
             </a>
             <a href="#contact">
-                <img id="hero__contact" class="hero__image" src="./assets/images/hero__contact.svg" alt="">
+                <img id="hero__contact" class="hero__image" src="./assets/images/hero__contact.svg" alt="Contact Us">
             </a>
             <div class="hero__red-container">
-                <img class="hero__red" class="hero__image" src="./assets/images/hero__red.svg" alt="">
+                <img class="hero__red hero__image" src="./assets/images/hero__red.svg" alt="Red Accent Image">
             </div>
             <div class="hero__green-container">
-                <img class="hero__green" class="hero__image" src="./assets/images/hero__green.svg" alt="">
+                <img class="hero__green hero__image" src="./assets/images/hero__green.svg"alt="Green Accent Image">
             </div>
         </article>
 
-        <article class="article aim">
+        <article class="article aim" role="article" aria-labelledby="aim__heading">
             <div class="article__column-container">
                 <div class="article__column">
                     <h3 class="article__h3">
@@ -85,7 +90,7 @@
             </div>
         </article>
 
-        <article class="article services">
+        <article class="article services" role="article" aria-labelledby="services__heading">
             <div class="article__column-container">
                 <div class="article__column">
                     <h3 class="article__h3">
@@ -120,7 +125,7 @@
             </div>
         </article>
 
-        <article class="article world">
+        <article class="article world" role="article" aria-labelledby="world__heading">
             <div class="article__column-container">
                 <div class="article__column">
                     <h3 class="article__h3">
@@ -178,7 +183,7 @@
             </div>
         </article>
 
-        <article class="article about" id="about">
+        <article class="article about" id="about" role="article" aria-labelledby="about__heading">
             <div class="article__column-container">
                 <div class="article__column">
                     <h3 class="article__h3">
@@ -204,7 +209,7 @@
             </div>
         </article>
 
-        <article class="article marisa">
+        <article class="article marisa" role="article" aria-labelledby="marisa__heading">
             <div class="article__column-container">
                 <div class="article__column">
                     <h3 class="article__h3">
@@ -219,7 +224,7 @@
             </div>
         </article>
 
-        <article class="article rita">
+        <article class="article rita" role="article" aria-labelledby="rita__heading">
             <div class="article__column-container">
                 <div class="article__column">
                     <h3 class="article__h3">
@@ -234,7 +239,7 @@
             </div>
         </article>
 
-        <article class="contact" id="contact">
+        <article class="contact" id="contact" role="article" aria-labelledby="contact__heading">
             <article class="article contact__article">
                 <div class="article__column-container contact__column-container">
                     <div class="article__column contact__column">
@@ -256,9 +261,10 @@
             </article>
         </article>
 
-        <article class="article footer">
+        <article class="article footer" role="contentinfo" aria-labelledby="footer__heading">
             <div class="article__column-container footer__column-container">
                 <div class="article__column">
+                    // Таблица / Sheets API / PHP / action="subscribe.php" method="post"
                     <form action="" class="footer__form">
                         <input class="footer__form_input" type="text" placeholder="SUBSCRIBE" name="name" required>
                         <button class="article__h3 footer__form_button">
@@ -276,25 +282,51 @@
             </div>
         </article>
     </main>
-</body>
+
     <script>
-        const articleEl = document.querySelector(".aim");
-        const contactEl = document.querySelector(".contact");
+       // Функция для применения стилей
+        const applyStyles = () => {
+            // Получаем элементы страницы
+            const articleEl = document.querySelector(".aim");
+            const contactEl = document.querySelector(".contact");
 
-        const articleElStyles = window.getComputedStyle(articleEl.querySelector('.article__column-container'));
-        contactEl.querySelector('.article__column-container').style.paddingLeft = articleElStyles.marginLeft;
+            // Проверяем наличие элементов
+            if (articleEl && contactEl) {
+                // Получаем стили для элемента .aim и применяем их к .contact
+                const articleElStyles = window.getComputedStyle(articleEl.querySelector('.article__column-container'));
+                contactEl.querySelector('.article__column-container').style.paddingLeft = articleElStyles.marginLeft;
+            } else {
+                // Выводим сообщение об ошибке, если элементы не найдены
+                console.error('Article element or contact element not found!');
+            }
+        };
 
+        // Функция для обработки кликов по якорным ссылкам
+        const handleAnchorClick = (e) => {
+            e.preventDefault();
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+            // Получаем элемент, к которому нужно прокрутить страницу
+            const targetElement = document.querySelector(e.target.getAttribute('href'));
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+            // Прокручиваем страницу к целевому элементу с плавным эффектом
+            if (targetElement) {
+                targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'nearest'
                 });
-            });
+            } else {
+                // Выводим сообщение об ошибке в случае, если целевой элемент не найден
+                console.error('Target element not found!');
+            }
+        };
+
+        // Применяем стили при загрузке страницы
+        document.addEventListener('DOMContentLoaded', applyStyles);
+
+        // Добавляем обработчики событий для всех якорных ссылок на странице
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', handleAnchorClick);
         });
     </script>
-    
+</body>
 </html>
