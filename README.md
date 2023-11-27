@@ -6,7 +6,8 @@
 
 ---
 
-## Макет
+## Ссылки 
 
-- [Figma](<https://www.figma.com/file/G3nlVn2lGYeuurKSYEw8Ug/Greenwich?type=design&node-id=65%3A2&mode=design&t=AM2LvSlSgPLQWkGR-1>)
+- [Макет в Figma](<https://www.figma.com/file/G3nlVn2lGYeuurKSYEw8Ug/Greenwich?type=design&node-id=65%3A2&mode=design&t=AM2LvSlSgPLQWkGR-1>)
+- [Посмотреть](<https://illiagoncharov.github.io/greenwich/>)
 
