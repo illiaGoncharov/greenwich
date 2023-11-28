@@ -263,7 +263,7 @@
         <article class="article footer" role="contentinfo" aria-labelledby="footer__heading">
             <div class="article__column-container footer__column-container">
                 <div class="article__column">
-                    // Таблица / Sheets API / PHP / action="subscribe.php" method="post"
+                    <!-- Таблица / Sheets API / PHP / action="subscribe.php" method="post" -->
                     <form action="" class="footer__form">
                         <input class="footer__form_input" type="text" placeholder="SUBSCRIBE" name="name" required>
                         <button class="article__h3 footer__form_button">
@@ -327,25 +327,6 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', handleAnchorClick);
         });
-
-        // // Проверка наличия элемента перед его использованием
-        // const articleEl = document.querySelector(".aim");
-        // const contactEl = document.querySelector(".contact");
-
-        // const articleElStyles = window.getComputedStyle(articleEl.querySelector('.article__column-container'));
-        // contactEl.querySelector('.article__column-container').style.paddingLeft = articleElStyles.marginLeft;
-
-        // // Обработка ошибок при навигации по якорным ссылкам
-        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        //     anchor.addEventListener('click', function (e) {
-        //         e.preventDefault();
-
-        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
-        //             behavior: 'smooth',
-        //             block: 'nearest'
-        //         });
-        //     });
-        // });
     </script>
 </body>
 </html>
