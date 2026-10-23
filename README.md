@@ -1,12 +1,35 @@
-# Проект Greewich Cultural Services
+# Greenwich Cultural Services
 
-## О проекте
+**Client landing page (2022)** — brand activation through contemporary art, UK client.
 
-**Greewich Cultural Services** — В рамках реализации проекта для британской галереи современного искусства, моя деятельность охватывала комплексные этапы разработки. Эффективное взаимодействие на профессиональном уровне на английском языке включало обширные консультации по требованиям и целям проекта. Я разработал и последовательно защитил несколько итераций макета, стремясь к оптимальному дизайну, и впоследствии реализовал верстку и отладку анимаций. Весь процесс выполнялся с акцентом на высоком профессионализме, гарантируя соответствие высоким стандартам визуальной эстетики и технической исправности конечного продукта.
+[**Live demo**](https://illiagoncharov.github.io/greenwich/) · [Figma concept](https://www.figma.com/file/G3nlVn2lGYeuurKSYEw8Ug/Greenwich?type=design&node-id=65%3A2&mode=design)
 
----
+## About
 
-## Ссылки 
+End-to-end delivery for **Greenwich Cultural Services**: requirements and feedback in English, several Figma iterations presented to the client, then static build with responsive layout, custom typography, CSS animations, and smooth in-page navigation.
 
-- [Макет в Figma](<https://www.figma.com/file/G3nlVn2lGYeuurKSYEw8Ug/Greenwich?type=design&node-id=65%3A2&mode=design&t=AM2LvSlSgPLQWkGR-1>)
-- [Посмотреть](<https://illiagoncharov.github.io/greenwich/>)
+## Role
+
+- Client communication (English)
+- UI concept in Figma
+- HTML / CSS / vanilla JS implementation
+- Animation tuning and page-load polish
+
+## Stack
+
+Semantic HTML · CSS (keyframes, responsive breakpoints) · vanilla JS · custom WOFF fonts · GitHub Pages
+
+## Run locally
+
+```bash
+git clone https://github.com/illiaGoncharov/greenwich.git
+cd greenwich
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+Open `index.html` directly only if your browser blocks local assets; a static server is recommended.
+
+## Author
+
+[Illia Goncharov](https://github.com/illiaGoncharov)
