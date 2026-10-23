@@ -1,6 +1,8 @@
 import { About } from "@/components/About";
 import { Aim } from "@/components/Aim";
 import { BackgroundStar } from "@/components/BackgroundStar";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 import { Founder, marisaBio, ritaBio } from "@/components/Founder";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
@@ -27,6 +29,8 @@ export default function Home() {
         headingId="rita__heading"
         bio={ritaBio}
       />
+      <Contact />
+      <Footer />
     </main>
   );
 }
