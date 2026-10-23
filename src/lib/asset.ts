@@ -1,5 +1,4 @@
-/** Префикс для файлов из public/ при basePath=/greenwich */
-const basePath = "/greenwich";
+import { basePath } from "./site";
 
 export function asset(path: string): string {
   const normalized = path.startsWith("/") ? path : `/${path}`;

@@ -24,7 +24,7 @@ git clone https://github.com/illiaGoncharov/greenwich.git
 cd greenwich
 npm install
 npm run dev
-# open http://localhost:3000/greenwich/
+# open http://localhost:3000/  (basePath только в production build для GitHub Pages)
 ```
 
 `basePath` is `/greenwich` (GitHub Pages project URL).
