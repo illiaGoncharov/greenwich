@@ -35,7 +35,12 @@ npm run build   # writes static site to out/
 
 ## Deploy
 
-Static export (`output: 'export'`) → publish the `out/` folder to the `gh-pages` branch (or Pages from Actions). Do not push until the branch is reviewed locally.
+```bash
+npm run build
+# publish contents of out/ to the gh-pages branch (GitHub Pages → source: gh-pages / root)
+```
+
+Site URL: [illiagoncharov.github.io/greenwich](https://illiagoncharov.github.io/greenwich/)
 
 ## Author
 
