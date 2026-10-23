@@ -2,13 +2,13 @@
 
 **Client landing page (2022 → Next rewrite)** — brand activation through contemporary art, UK client.
 
-[**Live demo**](https://illiagoncharov.github.io/greenwich/) · [Figma concept](https://www.figma.com/file/G3nlVn2lGYeuurKSYEw8Ug/Greenwich?type=design&node-id=65%3A2&mode=design)
+[**Live**](https://illiagoncharov.github.io/greenwich/) · [Repository](https://github.com/illiaGoncharov/greenwich) · [Figma concept](https://www.figma.com/file/G3nlVn2lGYeuurKSYEw8Ug/Greenwich?type=design&node-id=65%3A2&mode=design)
 
 Visual 1:1 rewrite of the original static site on a modern stack. Legacy HTML/CSS kept in [`legacy/`](./legacy/) as a parity reference.
 
 ## Stack
 
-Next.js (App Router) · TypeScript · Tailwind CSS v4 · `next/font` (custom WOFF) · static export → GitHub Pages
+Next.js (App Router) · TypeScript · Tailwind CSS v4 · `next/font` (custom WOFF) · static export → GitHub Pages (`gh-pages` branch)
 
 ## Role (original delivery)
 
@@ -37,10 +37,11 @@ npm run build   # writes static site to out/
 
 ```bash
 npm run build
-# publish contents of out/ to the gh-pages branch (GitHub Pages → source: gh-pages / root)
+# publish contents of out/ to the gh-pages branch
 ```
 
-Site URL: [illiagoncharov.github.io/greenwich](https://illiagoncharov.github.io/greenwich/)
+GitHub **Settings → Pages**: source **Deploy from a branch** → **`gh-pages`** → **`/ (root)`**.  
+Public URL: https://illiagoncharov.github.io/greenwich/
 
 ## Author
 
