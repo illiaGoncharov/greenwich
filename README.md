@@ -1,34 +1,41 @@
 # Greenwich Cultural Services
 
-**Client landing page (2022)** — brand activation through contemporary art, UK client.
+**Client landing page (2022 → Next rewrite)** — brand activation through contemporary art, UK client.
 
 [**Live demo**](https://illiagoncharov.github.io/greenwich/) · [Figma concept](https://www.figma.com/file/G3nlVn2lGYeuurKSYEw8Ug/Greenwich?type=design&node-id=65%3A2&mode=design)
 
-## About
-
-End-to-end delivery for **Greenwich Cultural Services**: requirements and feedback in English, several Figma iterations presented to the client, then static build with responsive layout, custom typography, CSS animations, and smooth in-page navigation.
-
-## Role
-
-- Client communication (English)
-- UI concept in Figma
-- HTML / CSS / vanilla JS implementation
-- Animation tuning and page-load polish
+Visual 1:1 rewrite of the original static site on a modern stack. Legacy HTML/CSS kept in [`legacy/`](./legacy/) as a parity reference.
 
 ## Stack
 
-Semantic HTML · CSS (keyframes, responsive breakpoints) · vanilla JS · custom WOFF fonts · GitHub Pages
+Next.js (App Router) · TypeScript · Tailwind CSS v4 · `next/font` (custom WOFF) · static export → GitHub Pages
+
+## Role (original delivery)
+
+- Client communication (English)
+- UI concept in Figma
+- Implementation (now Next / previously HTML / CSS / JS)
+- Animation tuning and page-load polish
 
 ## Run locally
 
 ```bash
 git clone https://github.com/illiaGoncharov/greenwich.git
 cd greenwich
-python3 -m http.server 8000
-# open http://localhost:8000
+npm install
+npm run dev
+# open http://localhost:3000/greenwich/
 ```
 
-Open `index.html` directly only if your browser blocks local assets; a static server is recommended.
+`basePath` is `/greenwich` (GitHub Pages project URL).
+
+```bash
+npm run build   # writes static site to out/
+```
+
+## Deploy
+
+Static export (`output: 'export'`) → publish the `out/` folder to the `gh-pages` branch (or Pages from Actions). Do not push until the branch is reviewed locally.
 
 ## Author
 
